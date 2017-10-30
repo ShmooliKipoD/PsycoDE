@@ -1,0 +1,10 @@
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/bin/Debug/netcoreapp2.0/blog.deps.json
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/bin/Debug/netcoreapp2.0/blog.runtimeconfig.json
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/bin/Debug/netcoreapp2.0/blog.runtimeconfig.dev.json
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/bin/Debug/netcoreapp2.0/blog.dll
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/bin/Debug/netcoreapp2.0/blog.pdb
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/obj/Debug/netcoreapp2.0/blog.csproj.CoreCompileInputs.cache
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/obj/Debug/netcoreapp2.0/blog.AssemblyInfoInputs.cache
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/obj/Debug/netcoreapp2.0/blog.AssemblyInfo.cs
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/obj/Debug/netcoreapp2.0/blog.dll
+/Users/samuelsayag/Projects/active/configuration/PsycoDE/src/test/samuel/blog/obj/Debug/netcoreapp2.0/blog.pdb
