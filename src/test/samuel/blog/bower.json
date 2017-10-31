@@ -5,7 +5,8 @@
     "underscore": "latest",
     "jquery": "latest",
     "jquery-validation": "latest",
-    "jquery-validation-unobtrusive": "latest"
+    "jquery-validation-unobtrusive": "latest",
+    "bootstrap": "latest"
   },
   "authors": [
     "Samuel <sayag.samuel@live.com>"
