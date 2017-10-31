@@ -5,17 +5,26 @@
     ViewBag.Title = "Home Page";
 }
 <!DOCTYPE html>
-<h1>Hello Bloggers!</h1>
 
-<form>
+<div class="row">
+    <div class="col-md-6 col-xs-8">
 
-    <div>
-        <label> Date : </label>
-        <input />
+        <h1>Hello Bloggers!</h1>
+
+        <form>
+
+            <div class="form-group">
+                <label> Date : </label>
+                <input class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label> Location : </label>
+                <input class="form-control"/>
+            </div>
+            <div><input type="submit" value="add" class="btn btn-success" /></div>
+        </form>
     </div>
-    <div>
-        <label> Location : </label>
-        <input />
+    <div class="col-md-6 col-xs-4">
+        <h4>Some other things</h4>
     </div>
-    <div><input type="submit" value="add" class="btn btn-primary" /></div>
-</form>
+</div>
