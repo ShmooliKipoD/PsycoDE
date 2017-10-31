@@ -3,25 +3,33 @@
 *@
 
 @model blog.ViewModels.ContactViewModel
+@Html.ValidationSummary(false)
 
 @{
     ViewBag.Title = "Contact Page";
 }
-@section scripts{
-    <script type="text/javascript" src="~/lib/jquery-validation/dist/additional-methods.min.js"></script>
+
+@section scripts {
+     
+    <script type="text/javascript" src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
     <script type="text/javascript" src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+   
 }
+
 <h2>Contact me (why not)</h2>
 <p>it is not that I have something better todo</p>
 
-<form>
+<form method="POST">
+    <span asp-validation-summary="ModeOnly"></span>
     <label asp-for="Name"></label>
 	<input asp-for="Name"/>
     <span asp-validation-for="Name"></span>
     <label asp-for="Email"></label>
     <input type="email" asp-for="Email"/>
+    <span asp-validation-for="Email"></span>
 	<label asp-for="Message" ></label>
     <textarea rows="4" cols="40" asp-for="Message" ></textarea>
+    <span asp-validation-for="Message"></span>
 	<div>
         <input type="submit" value="Send" />
 	</div>

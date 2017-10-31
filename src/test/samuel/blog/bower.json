@@ -2,10 +2,10 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "underscore": "~1.8.3",
-    "jquery": "~2.1.4",
-    "jquery-validation": "~1.15.0",
-    "jquery-validation-unobtrusive": "~3.2.6"
+    "underscore": "latest",
+    "jquery": "latest",
+    "jquery-validation": "latest",
+    "jquery-validation-unobtrusive": "latest"
   },
   "authors": [
     "Samuel <sayag.samuel@live.com>"
