@@ -4,8 +4,11 @@
     <meta charset="utf-8" />
     <title>The Blog - @ViewBag.Title</title>
 
-    <link rek="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap‎.css" />
+    <link rel="stylesheet" href="~/lib/bootswatch/yeti/bootstrap.css"/>
+    <link rel="stylesheet" href="~/lib/font-awesome/css/font-awesome.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    
 </head>
 <body>
     <div id="sidebar">
@@ -13,7 +16,7 @@
         <img src="~/img/user.png" alt="user" class="userpic"/>
         <span id="username" > User Name </span>
 
-        <ul class="menu">
+        <ul class="nav">
             <li class="active"><a asp-controller="App" asp-action="Index">  home</a></li>
             <li><a asp-controller="App" asp-action="About">About</a></li>
             <li><a asp-controller="App" asp-action="Contact">Contact</a></li>
@@ -22,37 +25,51 @@
     </div>
 
     <div id="wrapper">
-        <div id="main">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid" >
+                <ul class="nav navbar-nav navbar-left">
+                    <li>
+                        <button id="sidebarToggle" class="btn btn-sm btn-info">
+                         <i class="fa fa-angle-left"></i>
+                        </button>
+                    </li>
+                </ul>
+                <a asp-controller="App" asp-action="Index" class="navbar-brand">The Blog!</a>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" class="btn btn-sm btn-info">
+                            Save
+                            <i class="fa fa-save"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="btn btn-sm btn-info">
+                            Print
+                            <i class="fa fa-print"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div id="main" class="container-fluid">
             <div>
-                <button id="sidebarToggle" class="btn btn-primary">hide</button>
+                
             </div>
             @RenderBody()
 
         </div>
-        <div id="footer">
-            this is a footer
+        <div id="footer" class="container-fluid">
+            <div class="navbar navbar-inverse navbar-fixed-bottom">
+                <h4 class="text-center text-info">this is a footer</h4>
+            </div>
         </div>
     </div>
 
 
     <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    @RenderSection("scripts", false)
-
     <script type="text/javascript" src="~/js/site.js" ></script>
+    @RenderSection("scripts", false)
 
 </body>
 </html>
-<!--<!DOCTYPE html>
-
-<html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>@ViewBag.Title</title>
-</head>
-<body>
-    <div>
-        @RenderBody()
-    </div>
-</body>
-</html>-->

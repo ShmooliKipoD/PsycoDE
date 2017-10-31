@@ -6,7 +6,9 @@
     "jquery": "latest",
     "jquery-validation": "latest",
     "jquery-validation-unobtrusive": "latest",
-    "bootstrap": "latest"
+    "bootstrap": "latest",
+    "font-awesome":"latest",
+    "bootswatch":"latest"
   },
   "authors": [
     "Samuel <sayag.samuel@live.com>"
