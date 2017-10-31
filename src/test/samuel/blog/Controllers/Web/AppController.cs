@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using blog.Services;
 using blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
@@ -11,6 +12,14 @@ namespace blog.Controllers.Web
 {
     public class AppController : Controller
     {
+
+        IMailService _mailService;
+
+        public AppController(IMailService mailService)
+        {
+            this._mailService = mailService;
+        }
+
         // GET: /<controller>/
         public IActionResult Index()
         {
@@ -19,13 +28,18 @@ namespace blog.Controllers.Web
 
         public IActionResult About()
         {
-            //throw new Exception("bad things");
+           
 
             return View();
         }
 
         [HttpPost]
         public IActionResult Contact(ContactViewModel vm){
+
+             _mailService.SendMail("my@mail.com", 
+                                    vm.Email, 
+                                    "Mail from me", 
+                                    vm.Message);
 
             return View();
         }
