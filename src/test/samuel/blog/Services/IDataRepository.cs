@@ -3,7 +3,7 @@ using blog.Models;
 
 namespace blog.Services
 {
-    public interface IDateRepository
+    public interface IDataRepository
     {
          ICollection<Trip> Trips { get; }
     }

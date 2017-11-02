@@ -36,7 +36,8 @@ namespace blog
             services.AddSingleton(_config);
             services.AddScoped<IMailService, DebugMailService>();
 
-            services.AddSingleton(new MongoDateRepository(new BlogContext()));
+            // services.AddScoped<IDataRepository, MongoDataRepository>();
+            services.AddSingleton(new MongoDataRepository(new BlogContext()));
             
             services.AddLogging();
             services.AddMvc();

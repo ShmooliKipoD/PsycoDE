@@ -16,11 +16,11 @@ namespace blog.Controllers.Web
     {
         private IMailService _mailService;
         private IConfigurationRoot _config;
-        private MongoDateRepository _repository;
+        private MongoDataRepository _repository;
 
         public AppController(IMailService mailService,
                              IConfigurationRoot config,
-                             MongoDateRepository repository)
+                             MongoDataRepository repository)
         {
             this._mailService = mailService;
             this._config = config;

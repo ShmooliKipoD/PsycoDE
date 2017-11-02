@@ -6,11 +6,11 @@ using MongoDB.Driver;
 
 namespace blog.Services
 {
-    public class MongoDateRepository : IDateRepository
+    public class MongoDataRepository : IDataRepository
     {
         BlogContext _context;
 
-        public MongoDateRepository(BlogContext context)
+        public MongoDataRepository(BlogContext context)
         {
             this._context = context;
         }
