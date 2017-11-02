@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using blog.Models;
 using blog.Services;
 using blog.ViewModels;
 using Microsoft.AspNetCore.Mvc;
@@ -13,21 +14,25 @@ namespace blog.Controllers.Web
 {
     public class AppController : Controller
     {
-
-        IMailService _mailService;
+        private IMailService _mailService;
         private IConfigurationRoot _config;
+        private MongoDateRepository _repository;
 
         public AppController(IMailService mailService,
-                             IConfigurationRoot config)
+                             IConfigurationRoot config,
+                             MongoDateRepository repository)
         {
             this._mailService = mailService;
             this._config = config;
+            this._repository = repository;
         }
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View();
+            var trips = this._repository.Trips;
+
+            return View(trips);
         }
 
         public IActionResult About()
@@ -56,5 +61,7 @@ namespace blog.Controllers.Web
 
             return View();
         }
+
+        
     }
 }
