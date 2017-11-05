@@ -27,6 +27,18 @@ namespace blog.Services
             }
         }
 
+        public void AddTrip(Trip trip)
+        {
+            this._context.Trips.InsertOne(trip);
+        }
+
+        public Trip GetTripByName(string name)
+        {
+            return this.Trips
+                    .Where(t => t.Name == name)
+                    .SingleOrDefault();
+        }
+
         private void AddIfContextEmpty(IEnumerable<Trip> trips)
         {
             if(trips.Count() == 0){
@@ -92,6 +104,16 @@ namespace blog.Services
                 _context.Trips.InsertOne(t);
                 _context.Trips.InsertOne(t2);
             }
+        }
+
+        internal void AddNewStop(string name, Stop s)
+        {
+            Trip t = GetTripByName(name);
+            var stops = t.Stops ?? new List<Stop>();
+            stops.Add(s);
+            var filter = Builders<Trip>.Filter.Eq("Name", name);
+            var update = Builders<Trip>.Update.Set("Stops", stops);
+            this._context.Trips.UpdateOne(filter, update);
         }
     }
 }
